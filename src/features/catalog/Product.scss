@@ -1,0 +1,79 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// notes about cards:
+// https://codepen.io/cquick/pen/PoqLXyd?editors=1100
+// https://css-tricks.com/
+
+// display cards in grid
+@include media-breakpoint-down(lg) {
+
+  $card-width   : 220px;
+  $card-height  : 1.48 * $card-width;
+
+  #ProductList {
+    @include make-row();
+    justify-content: center;
+    margin: .2rem;
+  }
+  .ProductCard {
+    @include make-col-ready();
+    padding: 0;
+    margin: 1rem;
+    width: $card-width;
+    height: $card-height;
+  }
+}
+
+// display cards in line
+@include media-breakpoint-up(lg) {
+
+  $card-width   : 260px;
+  $card-height  : 1.48 * $card-width;
+  $card-reveal  : $card-width * .48;
+  $card-overlap : $card-reveal * -1;
+
+  #ProductList {
+    display: flex;
+    justify-content: center;
+    margin-left: 1/2 * $card-overlap;
+    z-index: 10;
+  }
+  .ProductCard {
+    transition: transform 200ms ease-in;
+    box-shadow: -1rem 0 3rem var(--bs-darker);
+    width: $card-width;
+    height: $card-height;
+    }
+  .ProductCard:not(:first-child) {
+    margin-left: $card-overlap;
+  }
+  .ProductCard:hover {
+    transform: translate(-.5rem,-1rem) rotate(-3deg);
+  }
+  .ProductCard:hover ~ .ProductCard {
+    transform: translateX($card-reveal);
+  }
+  .ProductCard .card-header {
+    height: 20%;
+    overflow: hidden;
+  }
+}
+
+// shrinks a bit the cards between 'lg' and 'xl'
+@include media-breakpoint-between(lg, xl) {
+
+  $card-width   : 240px;
+  $card-height  : 1.48 * $card-width;
+
+  #ProductList {max-width: var(--bs-md);}
+  .ProductCard {
+    width: $card-width;
+    height: $card-height;
+    }
+}
+
+// shared style
+.ProductCard:hover {
+  border: 3px solid var(--bs-light) !important;
+  box-shadow: 0 0 .4rem var(--bs-light), -1rem 0 3rem var(--bs-darker);
+}
