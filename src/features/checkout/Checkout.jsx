@@ -9,12 +9,12 @@ import {
   selectCartTotalPrice,
   selectCartBestDiscount,
   selectCartIdsFlatted,
-  selectCartBookAll,
+  selectCartProductJoin,
 } from '../../app/selectors'
 
 const Checkout = () => {
 
-  const products = useSelector(selectCartBookAll)
+  const products = useSelector(selectCartProductJoin)
   const totalNumber = useSelector(selectCartTotalNumberOfProducts)
   const discount = useSelector(selectCartBestDiscount)
   const idsFlattedForDiscount = useSelector(selectCartIdsFlatted)

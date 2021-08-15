@@ -1,0 +1,42 @@
+//https://create-react-app.dev/docs/adding-bootstrap/
+
+// -----------------------------------------------------------------
+// COLORS
+// -----------------------------------------------------------------
+// https://getbootstrap.com/docs/5.1/customize/sass/#maps-and-loops
+// https://getbootstrap.com/docs/5.1/customize/color/#theme-colors
+// https://getbootstrap.com/docs/4.1/getting-started/theming/#color
+
+// reset default color palette
+$primary: #f4b223;
+$secondary: #343534;
+$success: #4A2B10;
+$info: #a85;
+$warning: #9990ea;
+$danger: #ff6e6e;
+$light: #fcf5e7;
+$dark: #0d141e;
+
+// Create your own map
+$custom-colors: (
+  "darker": #00020a,
+);
+// reset $theme-colors avoids 'undefined variable' error
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// -----------------------------------------------------------------
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); // Lato
+
+// @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap'); // Medieval Sharp
+
+// @font-face {
+//   font-family: "Magic School Two";
+//   src: url("./assets/fonts/magicSchool/magicSchoolTwo.ttf") format("truetype");
+// }
+
+@font-face {
+  font-family: "Black Chancery";
+  src: url("./assets/fonts/blackChancery/blackChancery.ttf") format("truetype");
+  }
+
+#root {
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: var(--bs-darker);
+}

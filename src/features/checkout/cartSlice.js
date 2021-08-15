@@ -14,9 +14,15 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    cartUpdated(state, action) {
-      cartAdapter.setAll(state, action.payload)
-    }
+    upsertToCart(state, action) {
+      cartAdapter.upsertOne(state, action.payload)
+    },
+    updateCart(state, action) {
+      cartAdapter.updateOne(state, action.payload)
+    },
+    removeFromCart(state, action) {
+      cartAdapter.removeOne(state, action.payload)
+    },
   },
   extraReducers: builder => {
     builder
@@ -37,7 +43,9 @@ export const cartSlice = createSlice({
 export default cartSlice.reducer
 
 export const {
-  cartUpdated
+  upsertToCart,
+  updateCart,
+  removeFromCart,
 } = cartSlice.actions
 
 export const cartSelectors = cartAdapter.getSelectors((state) => state.cart)
