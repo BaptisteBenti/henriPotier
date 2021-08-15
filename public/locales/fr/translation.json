@@ -1,0 +1,12 @@
+{
+  "banner": {
+    "subHeading": "Le plus grand de tous les potiers"
+  },
+  "productList": {
+    "total": "{{count}} produit sélectionné",
+    "total_plural": "{{count}} produits sélectionnés"
+  },
+  "goToCheckout": {
+    "checkout": "Commander"
+  }
+}

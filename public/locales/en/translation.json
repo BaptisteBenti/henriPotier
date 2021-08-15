@@ -1,0 +1,12 @@
+{
+  "banner": {
+    "subHeading": "the greatest potter of them all"
+  },
+  "productList": {
+    "total": "{{count}} product selected",
+    "total_plural": "{{count}} products selected"
+  },
+  "goToCheckout": {
+    "checkout": "Checkout"
+  }
+}
