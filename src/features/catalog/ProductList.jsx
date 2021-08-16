@@ -27,7 +27,7 @@ const ProductList = () => {
         <div className="d-flex align-items-center my-5">
           {
             count > 0
-              ? <div className="px-3">t('productList.total', {count})</div>
+              ? <div className="px-3">{t('productList.total', {count})}</div>
               : undefined
           }
           <GoToCheckout />

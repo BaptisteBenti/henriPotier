@@ -4,7 +4,6 @@ import { selectCartProductById, selectStateTogglerStatusById } from "../../app/s
 import { removeFromCart } from '../checkout/cartSlice'
 import { addStateToggler, updateStateToggler } from "../ui/uiSlice"
 import QuantitySelector from "./QuantitySelector"
-import './Product.scss'
 
 const ProductCard = ({id}) => {
 

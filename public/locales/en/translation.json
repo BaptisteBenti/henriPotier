@@ -7,6 +7,17 @@
     "total_plural": "{{count}} products selected"
   },
   "goToCheckout": {
-    "checkout": "Checkout"
+    "checkout": "add to cart"
+  },
+  "cart": {
+    "yourCart": "review your cart",
+    "itemSubTotal": "{{count}} item subtotal",
+    "itemSubTotal_plural": "{{count}} items subtotal",
+    "discount": "magic discount",
+    "total": "total",
+    "continueShopping": "continue shopping",
+    "checkout": "checkout now",
+    "yourCartIsEmpty": "Oops, your cart is empty",
+    "removeFromCart": "remove"
   }
 }

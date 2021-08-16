@@ -15,7 +15,9 @@ const QuantitySelector = ({id, quantity}) => {
         dispatch(removeFromCart(id))
         dispatch(updateStateToggler({id, changes:{state: false}}))
       }())
-      : dispatch( upsertToCart({id, quantity: value}))
+      : (function(){
+        dispatch( upsertToCart({id, quantity: value}))
+      }())
   }, [value])
 
   return (

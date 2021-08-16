@@ -7,6 +7,17 @@
     "total_plural": "{{count}} produits sélectionnés"
   },
   "goToCheckout": {
-    "checkout": "Commander"
+    "checkout": "ajouter au panier"
+  },
+  "cart": {
+    "yourCart": "votre panier",
+    "itemSubTotal": "{{count}} produit sous-total",
+    "itemSubTotal_plural": "{{count}} produits sous-total",
+    "discount": "réduction magique",
+    "total": "total",
+    "continueShopping": "continuer vos achats",
+    "checkout": "valider votre commande ",
+    "yourCartIsEmpty": "votre panier est vide",
+    "removeFromCart": "retirer du panier"
   }
 }

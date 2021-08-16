@@ -1,0 +1,14 @@
+$card-width: 180px;
+$card-height  : 1.48 * $card-width;
+
+.itemCard {
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid var(--bs-secondary);
+  img {
+    width: $card-width;
+    height: $card-height;
+  }
+}
+.itemCard:last-child {
+  border: none;
+}
