@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { selectCartTotalNumberOfProducts } from "../../app/selectors"
 import CartItems from './CartItems'
-import GoToCatalog from './GoToCatalog'
 import CartFooter from './CartFooter'
+import GoToCatalog from './GoToCatalog'
 import './Cart.scss'
 
 const Cart = () => {
