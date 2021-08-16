@@ -1,18 +1,28 @@
+import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router"
-import { selectCartBestDiscount, selectCartSubTotalPrice, selectCartTotalNumberOfProducts, selectCartTotalPrice } from "../../app/selectors"
+import { selectCartBestDiscount, selectCartIdsFlatted, selectCartSubTotalPrice, selectCartTotalNumberOfProducts, selectCartTotalPrice } from "../../app/selectors"
+import { fetchDiscount } from "./cartSlice"
 import GoToCatalog from './GoToCatalog'
 
 const CartFooter = () => {
 
   const { t } = useTranslation()
 
-  const count     = useSelector(selectCartTotalNumberOfProducts)
-  const subTotal  = useSelector(selectCartSubTotalPrice)
-  const discount  = useSelector(selectCartBestDiscount)
-  const total     = useSelector(selectCartTotalPrice)
-  const history   = useHistory()
+  const count       = useSelector(selectCartTotalNumberOfProducts)
+  const subTotal    = useSelector(selectCartSubTotalPrice)
+  const discount    = useSelector(selectCartBestDiscount)
+  const total       = useSelector(selectCartTotalPrice)
+  const idsDiscount = useSelector(selectCartIdsFlatted)
+  const history     = useHistory()
+  const dispatch    = useDispatch()
+
+  useEffect(()=> {
+    if ( idsDiscount.length > 0 ) {
+      dispatch( fetchDiscount(idsDiscount) )
+    }
+  }, [subTotal])
 
   // NOT IMPLEMENTED YET
   // go to next step checkout...

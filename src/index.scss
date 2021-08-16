@@ -13,12 +13,13 @@
   }
 
 #root {
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Lato', sans-serif;
 }
 
 body {
   background-color: var(--bs-darker);
+  min-height: 100vh;
 }
 
 .ff-blackChancery {

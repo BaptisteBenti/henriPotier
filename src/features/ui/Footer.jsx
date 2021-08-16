@@ -2,7 +2,7 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <footer id="Foo" className="d-flex flex-column justify-content-end footer mt-5 text-white-50 text-center fs-6 py-3">
+    <footer className="d-flex flex-column footer mt-5 text-white-50 text-center fs-6 py-3">
       <div className="my-5">
         <a className="text-white-50" href="https://github.com/BaptisteBenti/">
           <GithubIcon width="32" height="32"/>
